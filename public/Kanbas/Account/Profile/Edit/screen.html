@@ -1,37 +1,227 @@
 <html>
-  <header></header>
+  <header>
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+  </header>
   <body>
-    <table width="100%">
+    <div class="d-flex">
+      <div>
+        <ul class="wd-kanbas-navigation">
+          <li>
+            <a href="http://northeastern.edu">
+              <img
+                src="/images/northeastern-small-logo.png"
+                class="wd-nav-logo"
+              />
+            </a>
+          </li>
+          <li class="wd-active">
+            <a href="/Kanbas/Account/Profile/screen.html"
+              ><i class="fa fa-user-circle-o" style="color: grey"></i>Account</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Dashboard/screen.html">
+              <i class="fa fa-tachometer"></i>Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Home/screen.html"
+              ><i class="fa fa-book"></i>Courses</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-calendar"></i>Calendar</a>
+          </li>
+          <li>
+            <a href="#"> <i class="fa fa-inbox"></i><br />Inbox </a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-history"> </i>History</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-film"></i>Studio</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-sign-out"></i>Commons</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-question-circle-o"></i><br />Help</a>
+          </li>
+        </ul>
+      </div>
+      <div class="">
+        <ul>
+          <li>
+            <a href="#">Notifications</a>
+          </li>
+          <li>
+            <a href="/Kanbas/Account/Profile/screen.html">Profile</a>
+          </li>
+          <li>
+            <a href="#">Files</a>
+          </li>
+          <li>
+            <a href="#">Settings</a>
+          </li>
+          <li>
+            <a href="#">ePortfolios</a>
+          </li>
+          <li>
+            <a href="#">Shared Content</a>
+          </li>
+          <li>
+            <a href="#">The Hub</a>
+          </li>
+          <li>
+            <a href="#">Qwickly Course Tools</a>
+          </li>
+          <li>
+            <a href="#">Global Announcements</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2>Jose Annunziato</h2>
+        <form>
+          <label for="edit-profile-name">Name:*</label>
+          <input type="text" id="edit-profile-name" value="Jose Annunziato" />
+          <label for="edit-profile-pronouns">Pronouns:</label>
+          <select id="edit-profile-pronouns">
+            <option selected value="NONE">None</option>
+          </select>
+          <br /><br />
+          <label for="edit-profile-title">Title:</label>
+          <input type="text" id="edit-profile-name" />
+          <h3>Contact</h3>
+          <p>
+            No registered services, you can add some on the
+            <a href="#">settings</a> page.
+          </p>
+          <h3>Biography</h3>
+          <p>
+            Faculty, Software Engineer, AI, Space, and renewables enthusiast.
+          </p>
+          <textarea cols="50" rows="10">
+Faculty, Software Engineer, AI, Space, and renewables enthusiast.
+</textarea
+          >
+          <h2>Links</h2>
+          <ul>
+            <li>
+              <a href="#">Youtube Links to an external site.</a>
+            </li>
+          </ul>
+          <table>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th></th>
+                <th>URL</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="text" value="Youtube" />
+                </td>
+                <td>→</td>
+                <td>
+                  <input type="text" value="https://youtube.com" />
+                </td>
+                <td>
+                  <a href="#">Remove</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <button type="button">Add another link</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button">Cancel</button>
+                  <button type="button">
+                    <a href="/Kanbas/Account/Profile/screen.html"
+                      >Save Profile</a
+                    >
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button">
+                    <a href="/Kanbas/Account/Profile/Edit/screen.html"
+                      >Save Profile</a
+                    >
+                  </button>
+                  <button type="button">
+                    <a href="/Kanbas/Account/Profile/screen.html"
+                      >Cancel Editing</a
+                    >
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+    <!-- <table width="100%">
       <tbody>
         <tr>
-          <td valign="top">
-            <ul>
+          <td valign="top" style="width: 80px;">
+            <ul class="wd-kanbas-navigation">
               <li>
-                <a href="/Kanbas/Account/Profile/screen.html">Account</a>
+                <a href="http://northeastern.edu">
+                  <img
+                    src="/images/northeastern-small-logo.png"
+                    class="wd-nav-logo"
+                  />
+                </a>
+              </li>
+              <li class="wd-active">
+                <a href="/Kanbas/Account/Profile/screen.html"
+                  ><i class="fa fa-user-circle-o" style="color: grey"></i
+                  >Account</a
+                >
               </li>
               <li>
-                <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
+                <a href="/Kanbas/Dashboard/screen.html">
+                  <i class="fa fa-tachometer"></i>Dashboard</a
+                >
               </li>
               <li>
-                <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
+                <a href="/Kanbas/Courses/Home/screen.html"
+                  ><i class="fa fa-book"></i>Courses</a
+                >
               </li>
               <li>
-                <a href="#">Calendar</a>
+                <a href="#"><i class="fa fa-calendar"></i>Calendar</a>
               </li>
               <li>
-                <a href="#">Inbox</a>
+                <a href="#"> <i class="fa fa-inbox"></i><br />Inbox </a>
               </li>
               <li>
-                <a href="/Kanbas/History/index.html">History</a>
+                <a href="#"><i class="fa fa-history"> </i>History</a>
               </li>
               <li>
-                <a href="#">Studio</a>
+                <a href="#"><i class="fa fa-film"></i>Studio</a>
               </li>
               <li>
-                <a href="#">Commons</a>
+                <a href="#"><i class="fa fa-sign-out"></i>Commons</a>
               </li>
               <li>
-                <a href="#">Help</a>
+                <a href="#"
+                  ><i class="fa fa-question-circle-o"></i><br />Help</a
+                >
               </li>
             </ul>
           </td>
@@ -157,6 +347,6 @@ Faculty, Software Engineer, AI, Space, and renewables enthusiast.
           </td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
   </body>
 </html>
