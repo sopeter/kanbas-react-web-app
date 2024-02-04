@@ -13,25 +13,124 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <nav class="navbar navbar-dark bg-dark d-md-none">
-      <div class="row flex-fill align-items-center">
-        <div class="col d-flex justify-content-start mx-2">
-          <button class="btn" type="button">
-            <i class="fa fa-bars" style="color: whitesmoke"></i>
-          </button>
-        </div>
-        <div class="col">
-          <p class="text-center align-middle my-auto" style="color: whitesmoke">
-            CS4550
-          </p>
-        </div>
-        <div class="col d-flex justify-content-end mx-2">
-          <button type="button" class="btn">
-            <i class="fa fa-chevron-down" style="color: whitesmoke"></i>
-          </button>
-        </div>
-      </div>
-    </nav>
+<nav class="navbar navbar-dark bg-dark d-md-none">
+  <div class="row flex-fill align-items-center">
+    <div class="col d-flex justify-content-start mx-2">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+    <div class="col">
+      <p class="text-center align-middle my-auto" style="color: whitesmoke">
+        CS4550
+      </p>
+    </div>
+    <div class="col d-flex justify-content-end mx-2">
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-chevron-down"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav mx-2">
+    <li>
+      <a href="/Kanbas/Account/Profile/screen.html" class="red-font text-decoration-none"
+        ><i class="fa fa-user-circle-o"></i
+        > Account</a
+      >
+    </li>
+    <li>
+      <a href="/Kanbas/Dashboard/screen.html" class="red-font text-decoration-none">
+        <i class="fa fa-tachometer"></i> Dashboard</a
+      >
+    </li>
+    <li>
+      <a href="/Kanbas/Courses/Home/screen.html" class="red-font text-decoration-none"
+        ><i class="fa fa-book"></i> Courses</a
+      >
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"><i class="fa fa-calendar"></i> Calendar</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"><i class="fa fa-inbox"></i> Inbox </a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"><i class="fa fa-history"></i> History</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"><i class="fa fa-film"></i> Studio</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"><i class="fa fa-sign-out"></i> Commons</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"><i class="fa fa-question-circle-o"></i> Help</a>
+    </li>
+  </ul>
+</div>
+
+<!-- Additional dropdown for the chevron button -->
+<div class="collapse navbar-collapse" id="navbarLinks">
+  <ul class="navbar-nav mx-2">
+    <li>
+      <a href="/Kanbas/Courses/Home/screen.html" class="red-font text-decoration-none"> Home</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> Modules</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> Piazza</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> Zoom Meetings</a>
+    </li>
+    <li>
+      <a href="/Kanbas/Courses/Assignments/screen.html" class="red-font text-decoration-none"> Assignments</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> Quizzes</a>
+    </li>
+    <li>
+      <a href="/Kanbas/Courses/Grades/screen.html" class="red-font text-decoration-none"> Grades</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> People</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> Panopto Video</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> Discussions</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> Announcements</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> Pages</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> Files</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> Rubrics</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> Outcomes</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> Collaborations</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> Syllabus</a>
+    </li>
+    <li>
+      <a href="#" class="red-font text-decoration-none"> Settings</a>
+    </li>
+  </ul>
+</div>
     <div class="d-flex">
       <div class="d-none d-md-block">
         <ul class="wd-kanbas-navigation" style="width: 80px">
@@ -157,7 +256,7 @@
                 id="dropdownMenuButton"
                 data-toggle="dropdown"
               >
-                Publish All
+                <i class="fa fa-check-circle-o" style="color: greenyellow;"></i> Publish All
               </button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="#"> Publish All </a>
@@ -406,11 +505,11 @@
         <div class="d-flex row">
           <h4>Course Status</h4>
           <div class="col">
-            <button class="btn btn-secondary w-40" type="button">
-              Unpublish
+            <button class="btn btn-secondary" style="padding: 6px 3.5px;" type="button">
+              <i class="fa fa-ban"></i> Unpublish
             </button>
-            <button class="btn btn-success w-40" type="button">
-              Published
+            <button class="btn btn-success" style="padding: 6px 3.5px;"type="button">
+              <i class="fa fa-check-circle"></i> Published
             </button>
           </div>
           <br />
