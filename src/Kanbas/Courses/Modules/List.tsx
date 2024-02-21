@@ -14,26 +14,26 @@ function ModuleList() {
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
   return (
     <div>
-      <div className="row row-xs-5 justify-content-end mt-2 g-1">
-        <div className="col-auto">
+      <div className="row row-xs-5 w-100 mt-2 g-1">
+        <div className="col">
           <button
             type="button"
-            className="btn wd-lgrey-button wd-border-button"
+            className="btn w-100 wd-lgrey-button wd-border-button"
           >
             Collapse All
           </button>
         </div>
-        <div className="col-auto">
+        <div className="col">
           <button
             type="button"
-            className="btn wd-lgrey-button wd-border-button"
+            className="btn w-100 wd-lgrey-button wd-border-button"
           >
             View Progress
           </button>
         </div>
-        <div className="col-auto dropdown">
+        <div className="col dropdown">
           <button
-            className="btn wd-lgrey-button dropdown-toggle wd-border-button"
+            className="btn w-100 wd-lgrey-button dropdown-toggle wd-border-button"
             type="button"
             id="dropdownMenuButton"
             data-toggle="dropdown"
@@ -41,21 +41,24 @@ function ModuleList() {
             {<FaRegCheckCircle className="text-success" />} Publish All
           </button>
         </div>
-        <div className="col-auto">
-          <button type="button" className="btn btn-danger wd-border-button">
+        <div className="col">
+          <button
+            type="button"
+            className="btn w-100 btn-danger wd-border-button"
+          >
             + Module
           </button>
         </div>
         <div className="col-auto">
           <button
             type="button"
-            className="btn wd-lgrey-button wd-border-button"
+            className="btn w-100 wd-lgrey-button wd-border-button"
           >
             <FaEllipsisV />
           </button>
         </div>
       </div>
-      <hr/>
+      <hr />
 
       <ul className="list-group wd-modules">
         {modulesList.map((module) => (

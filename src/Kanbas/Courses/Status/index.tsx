@@ -1,4 +1,11 @@
-import { FaBell, FaBullhorn, FaBullseye, FaChartBar, FaCrosshairs, FaFileImport, FaRegBell, FaSignOutAlt } from "react-icons/fa";
+import {
+  FaBullhorn,
+  FaChartBar,
+  FaCrosshairs,
+  FaFileImport,
+  FaRegBell,
+  FaSignOutAlt,
+} from "react-icons/fa";
 import "./index.css";
 
 function Status() {
@@ -10,13 +17,15 @@ function Status() {
       >
         <div className="d-flex row">
           <ul className="list-unstyled">
-            <li >
+            <li>
               <a href="#">
                 <button
                   className="btn wd-lgrey-button wd-border-button full-button w-100 "
                   type="button"
                 >
-                  <span ><FaFileImport/> Import Existing Content</span>
+                  <span>
+                    <FaFileImport /> Import Existing Content
+                  </span>
                 </button>
               </a>
             </li>
@@ -26,7 +35,9 @@ function Status() {
                   className="btn wd-lgrey-button wd-border-button full-button w-100 mt-1"
                   type="button"
                 >
-                  <span><FaSignOutAlt/> Import From Commons</span>
+                  <span>
+                    <FaSignOutAlt /> Import From Commons
+                  </span>
                 </button>
               </a>
             </li>
@@ -36,7 +47,9 @@ function Status() {
                   className="btn wd-lgrey-button wd-border-button full-button w-100 mt-1"
                   type="button"
                 >
-                  <span><FaCrosshairs/> Choose Home Page</span>
+                  <span>
+                    <FaCrosshairs /> Choose Home Page
+                  </span>
                 </button>
               </a>
             </li>
@@ -46,7 +59,9 @@ function Status() {
                   className="btn wd-lgrey-button wd-border-button full-button w-100 mt-1"
                   type="button"
                 >
-                  <span><FaChartBar/> View Course Stream</span>
+                  <span>
+                    <FaChartBar /> View Course Stream
+                  </span>
                 </button>
               </a>
             </li>
@@ -56,7 +71,9 @@ function Status() {
                   className="btn wd-lgrey-button wd-border-button full-button w-100 mt-1"
                   type="button"
                 >
-                  <span><FaBullhorn /> New Announcement</span>
+                  <span>
+                    <FaBullhorn /> New Announcement
+                  </span>
                 </button>
               </a>
             </li>
@@ -66,19 +83,23 @@ function Status() {
                   className="btn wd-lgrey-button wd-border-button full-button w-100 mt-1"
                   type="button"
                 >
-                  <span><FaChartBar/> New Analytics</span>
+                  <span>
+                    <FaChartBar /> New Analytics
+                  </span>
                 </button>
               </a>
             </li>
             <li>
-              <a href="#">
+              {/* <a href="#"> */}
                 <button
                   className="btn wd-lgrey-button wd-border-button full-button w-100 mt-1 text-nowrap"
                   type="button"
                 >
-                  <span className=""><FaRegBell/> View Course Notifications</span>
+                  <span className="">
+                    <FaRegBell /> View Course Notifications
+                  </span>
                 </button>
-              </a>
+              {/* </a> */}
             </li>
           </ul>
         </div>

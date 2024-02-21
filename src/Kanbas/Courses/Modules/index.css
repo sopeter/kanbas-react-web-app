@@ -58,6 +58,12 @@
   color: black;
 }
 
+.wd-lgrey-button:hover {
+  background-color: rgb(186, 186, 186);
+  color: black;
+  border: 1px solid black;
+}
+
 .wd-border-button {
   border: 1px solid black;
 }
