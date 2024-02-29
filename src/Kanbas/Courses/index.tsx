@@ -12,7 +12,7 @@ function Courses() {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
   const location = useLocation();
-  const { hash, pathname, search } = location;
+  const { pathname } = location;
   const pathHeader = pathname.split("/").pop();
   return (
     <div>
