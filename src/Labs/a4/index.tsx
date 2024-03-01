@@ -11,6 +11,7 @@ import ObjectStateVariable from "./ObjectStateVariable";
 import ArrayStateVariable from "./ArrayStateVariable";
 import ParentStateComponent from "./ParentStateComponent";
 import ReduxExamples from "./ReduxExamples";
+import TodoList from "./ReduxExamples/todos/TodoList";
 
 const Assignment4 = () => {
   function sayHello() {
@@ -31,6 +32,7 @@ const Assignment4 = () => {
       <ObjectStateVariable/>
       <ArrayStateVariable />
       <ParentStateComponent />
+      <TodoList/>
     </>
   );
 };
