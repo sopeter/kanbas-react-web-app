@@ -1,14 +1,18 @@
-import { courses } from "../../Kanbas/Database";
-import { Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
+import {
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+  useParams,
+} from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import CourseNavigation from "./Navigation";
 import "./index.css";
 import Modules from "./Modules";
-import Home from "./Home"
+import Home from "./Home";
 import Assignments from "./Assignments";
 
-
-function Courses() {
+function Courses({ courses }: { courses: any[] }) {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
   const location = useLocation();
@@ -18,18 +22,12 @@ function Courses() {
     <div>
       <div className="mt-1 mx-1 d-flex align-items-center">
         <span className="wd-course-header-sandwich">
-          <HiMiniBars3 /> 
+          <HiMiniBars3 />
         </span>
-        
-        <span className="wd-course-header">
-          {course?.name} 
-        </span>
-        <span className="wd-course-header-breadcrumb">
-          {">"} 
-        </span>
-        <span className="wd-course-header-course-nav">
-          {pathHeader}
-        </span>
+
+        <span className="wd-course-header">{course?.name}</span>
+        <span className="wd-course-header-breadcrumb">{">"}</span>
+        <span className="wd-course-header-course-nav">{pathHeader}</span>
       </div>
       <hr />
       <CourseNavigation />
