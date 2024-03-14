@@ -1,5 +1,5 @@
 .wd-modules,
-.wd-modules * {
+.wd-modules *:not(button, input, textarea) {
   border-radius: 0%;
   border: none;
   margin: 0px;
@@ -66,4 +66,16 @@
 
 .wd-border-button {
   border: 1px solid black;
+}
+
+.wd-border-button span {
+  font-size: 0.8em;
+}
+
+.red-font {
+  color: red;
+}
+
+.btn-xs {
+  font-size: 10px;
 }

@@ -6,7 +6,6 @@ import {
   FaRegBell,
   FaSignOutAlt,
 } from "react-icons/fa";
-import "./index.css";
 
 function Status() {
   return (
