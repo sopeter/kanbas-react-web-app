@@ -5,7 +5,9 @@ function Home() {
   return (
     <div className="d-flex">
       <ModuleList />
-      <Status />
+      <div className="d-none d-xl-block mx-auto">
+        <Status />
+      </div>
     </div>
   );
 }
