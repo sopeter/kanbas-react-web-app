@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
+
 function WorkingWithArrays() {
-  const API = "http://localhost:4000/a5/todos";
+  const API = `${API_BASE}/a5/todos`;
   const [todo, setTodo] = useState({
     id: 1,
     title: "NodeJS Assignment",
@@ -110,7 +112,7 @@ function WorkingWithArrays() {
         }
       />
       <br />
-      <button onClick={createTodo}>Create Todo</button>
+      <button onClick={createTodo} disabled>Create Todo</button>
       <button onClick={updateTitle}>Update Title</button>
       <button onClick={postTodo}> Post Todo </button>
       <button onClick={updateTodo}> Update Todo </button>
@@ -133,7 +135,7 @@ function WorkingWithArrays() {
 
             {todo.title}
           </li>
-        ))}
+        ))};
       </ul>
       <h4>Updating an Item in an Array</h4>
       <a href={`${API}/${todo.id}/title/${todo.title}`}>
@@ -160,7 +162,7 @@ function WorkingWithArrays() {
       <h4>Filtering Array Items</h4>
       <a href={`${API}?completed=true`}>Get Completed Todos</a>
       <h4>Creating new Items in an Array</h4>
-      <a href={`${API}/create`}>Create Todo</a>
+      <a aria-disabled href={`${API}/create`}>Create Todo</a>
       <h3>Deleting from an Array</h3>
       <a href={`${API}/${todo.id}/delete`}>Delete Todo with ID = {todo.id}</a>
     </div>
