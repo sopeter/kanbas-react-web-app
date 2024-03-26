@@ -2,13 +2,15 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import KanbasNavigation from "./Navigation";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
-import { courses as dbCourses } from "../Kanbas/Database";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import store from "./store";
 import { Provider } from "react-redux";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
+
 function Kanbas() {
-  const [courses, setCourses] = useState(dbCourses);
+  const [courses, setCourses] = useState<any[]>([]);
   const [course, setCourse] = useState({
     _id: "0",
     name: "New Course",
@@ -17,14 +19,24 @@ function Kanbas() {
     endDate: "2023-12-15",
     image: "reactjs.jpg",
   });
-  const addNewCourse = () => {
-    const newCourse = { ...course, _id: new Date().getTime().toString() };
-    setCourses([...courses, { ...course, ...newCourse }]);
+  const COURSES_API = `${API_BASE}/api/courses`;
+  const findAllCourses = async () => {
+    const response = await axios.get(COURSES_API);
+    setCourses(response.data);
   };
-  const deleteCourse = (courseId: string) => {
+  useEffect(() => {
+    findAllCourses();
+  }, []);
+  const addNewCourse = async () => {
+    const response = await axios.post(COURSES_API, course);
+    setCourses([...courses, response.data]);
+  };
+  const deleteCourse = async (courseId: string) => {
+    const response = await axios.delete(`${COURSES_API}/${courseId}`);
     setCourses(courses.filter((course) => course._id !== courseId));
   };
-  const updateCourse = () => {
+  const updateCourse = async () => {
+    const response = await axios.put(`${COURSES_API}/${course._id}`, course);
     setCourses(
       courses.map((c) => {
         if (c._id === course._id) {
@@ -60,7 +72,7 @@ function Kanbas() {
             />
             <Route
               path="Courses/:courseId/*"
-              element={<Courses courses={courses} />}
+              element={<Courses />}
             />
           </Routes>
         </div>
