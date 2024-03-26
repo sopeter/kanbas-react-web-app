@@ -45,7 +45,6 @@ function WorkingWithArrays() {
     setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
   };
 
-
   useEffect(() => {
     fetchTodos();
   }, []);
