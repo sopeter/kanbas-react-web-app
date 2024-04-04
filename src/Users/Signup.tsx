@@ -14,15 +14,34 @@ export default function Signup() {
     }
   };
   return (
-    <div>
+    <div className="container w-50">
       <h1>Signup</h1>
       {error && <div>{error}</div>}
-      <input value={user.username} onChange={(e) => setUser({
-          ...user, username: e.target.value })} />
-      <input value={user.password} onChange={(e) => setUser({
-          ...user, password: e.target.value })} />
-      <button onClick={signup}> Signup </button>
+      <input
+        className="form-control my-2"
+        type="text"
+        value={user.username}
+        onChange={(e) =>
+          setUser({
+            ...user,
+            username: e.target.value,
+          })
+        }
+      />
+      <input
+        className="form-control my-2"
+        type="text"
+        value={user.password}
+        onChange={(e) =>
+          setUser({
+            ...user,
+            password: e.target.value,
+          })
+        }
+      />
+      <button className="btn btn-primary w-100 my-2" type="button" onClick={signup}>
+        Signup
+      </button>
     </div>
   );
 }
-

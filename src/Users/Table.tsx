@@ -67,7 +67,7 @@ export default function UserTable() {
     fetchUsers();
   }, []);
   return (
-    <div>
+    <div className="container mt-4">
       <select
         onChange={(e) => fetchUsersByRole(e.target.value)}
         value={role || "USER"}
@@ -81,20 +81,45 @@ export default function UserTable() {
       <h1>User Table</h1>
       <table className="table">
         <thead>
-          {/* <tr> <!-- add Role to header row --> </tr> */}
           <tr>
             <td>
-              <input
-                value={user.password}
-                onChange={(e) => setUser({ ...user, password: e.target.value })}
-              />
-              <input
-                value={user.username}
-                onChange={(e) => setUser({ ...user, username: e.target.value })}
-              />
+              <strong>Username</strong>
+            </td>
+            <td>
+              <strong>First Name</strong>
+            </td>
+            <td>
+              <strong>Last Name</strong>
+            </td>
+            <td>
+              <strong>Role</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="d-flex">
+                <input
+                  className="form-control w-50"
+                  type="text"
+                  value={user.username}
+                  onChange={(e) =>
+                    setUser({ ...user, username: e.target.value })
+                  }
+                />
+                <input
+                  className="form-control w-50"
+                  type="password"
+                  value={user.password}
+                  onChange={(e) =>
+                    setUser({ ...user, password: e.target.value })
+                  }
+                />
+              </div>
             </td>
             <td>
               <input
+                className="form-control"
+                type="text"
                 value={user.firstName}
                 onChange={(e) =>
                   setUser({ ...user, firstName: e.target.value })
@@ -103,12 +128,15 @@ export default function UserTable() {
             </td>
             <td>
               <input
+                className="form-control"
+                type="text"
                 value={user.lastName}
                 onChange={(e) => setUser({ ...user, lastName: e.target.value })}
               />
             </td>
             <td>
               <select
+                className="form-control"
                 value={user.role}
                 onChange={(e) => setUser({ ...user, role: e.target.value })}
               >
@@ -123,7 +151,10 @@ export default function UserTable() {
                 onClick={updateUser}
                 className="me-2 text-success fs-1 text"
               />
-              <BsPlusCircleFill onClick={createUser} />
+              <BsPlusCircleFill
+                onClick={createUser}
+                className="me-2 text-success fs-1 text"
+              />
             </td>
           </tr>
         </thead>
@@ -133,6 +164,7 @@ export default function UserTable() {
               <td>{user.username}</td>
               <td>{user.firstName}</td>
               <td>{user.lastName}</td>
+              <td>{user.role}</td>
               <td className="text-nowrap">
                 <button className="btn btn-danger me-2">
                   <BsTrash3Fill onClick={() => deleteUser(user)} />
